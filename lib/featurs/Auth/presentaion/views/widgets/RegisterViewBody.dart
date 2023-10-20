@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/utils/routes.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/PageViewItem.dart';
 
 class RegisterViewBody extends StatefulWidget {
@@ -55,13 +56,10 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
           visibleText:
               'Add a username or use our suggestion.You can change this at any time.',
         ),
-                PageViewItem(
+        PageViewItem(
           hintText: 'email',
           onPressed: () {
-            setState(() {
-              _pageController.previousPage(
-                  duration: Duration(seconds: 1), curve: Curves.easeIn);
-            });
+            Navigator.of(context).pushReplacementNamed(Routes.home);
           },
           titleText: 'What is your email?',
           visible: true,
@@ -72,5 +70,3 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
     );
   }
 }
-
-
