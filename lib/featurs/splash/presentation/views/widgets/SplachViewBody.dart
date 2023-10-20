@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
 
 class SplachViewBody extends StatelessWidget {
@@ -10,13 +9,28 @@ class SplachViewBody extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Center(
-          child: Image.asset('assets/images/Instagram logo.png'),
+        Expanded(
+            child: Image.asset(
+          'assets/images/Instagram logo.png',
+            
+        )
         ),
-        Text(
-          'from',
-          style:
-              Styles.titleMeduim14.copyWith(color: Colors.grey, fontSize: 16),
+        Stack(
+          children: [
+            Positioned(
+              top: 8,
+              right: 43,
+              child: Text(
+                'from',
+                style: Styles.titleMeduim14
+                    .copyWith(color: Colors.grey, fontSize: 16),
+              ),
+            ),
+            Image.asset(
+              'assets/images/metaLogo.png',
+              height: 120,
+            )
+          ],
         )
       ],
     );
