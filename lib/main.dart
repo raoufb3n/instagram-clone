@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/LoginView.dart';
+import 'package:instagram_clone/featurs/Auth/presentaion/views/RegisterView.dart';
 import 'package:instagram_clone/featurs/splash/presentation/views/SplashView.dart';
 
 void main() {
@@ -13,7 +14,8 @@ class InstagramClone extends StatelessWidget {
     return MaterialApp(
       routes: {
        'splash':(context) => SplachView(),
-       'login':(context) => LoginView()
+       'login':(context) => LoginView(),
+       'register':(context) => RegisterView()
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

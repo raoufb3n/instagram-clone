@@ -3,15 +3,16 @@ import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({super.key, required this.labelText, required this.check});
+  CustomButton({super.key, required this.labelText, required this.check,required this.onPressed});
   final String labelText;
   bool check;
+  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       highlightElevation: 0,
       elevation: 0,
-      onPressed: () {},
+      onPressed: onPressed,
       color: check ? ColorsStyles.blue.withOpacity(0) : ColorsStyles.blue,
       minWidth: double.infinity,
       height: 49,

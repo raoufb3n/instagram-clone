@@ -58,18 +58,21 @@ class LoginViewBody extends StatelessWidget {
           Column(
             children: [
               CustomTextField(
+                obsecure: false,
                 hintText: 'Usernmae,email or mobile number',
               ),
               const SizedBox(
                 height: 12,
               ),
               CustomTextField(
+                obsecure: false,
                 hintText: 'Password',
               ),
               const SizedBox(
                 height: 16,
               ),
               CustomButton(
+                onPressed: () {},
                 labelText: 'Log in',
                 check: false,
               ),
@@ -87,6 +90,9 @@ class LoginViewBody extends StatelessWidget {
             ],
           ),
           CustomButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed('register');
+            },
             labelText: 'Create new account',
             check: true,
           )
