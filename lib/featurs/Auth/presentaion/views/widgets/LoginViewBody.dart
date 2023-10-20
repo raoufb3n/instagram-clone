@@ -15,11 +15,39 @@ class LoginViewBody extends StatelessWidget {
       decoration: BoxDecoration(gradient: ColorsStyles.gradientTwo),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(children: [
-          Text(
-            'English(US)',
-            style: Styles.titleMeduim13.copyWith(color: Colors.grey),
-          ),
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+          DropdownButton(
+              borderRadius: BorderRadius.circular(11),
+              hint: Text(
+                'English(US)',
+                style: Styles.titleMeduim13.copyWith(color: Colors.grey),
+              ),
+              elevation: 0,
+              items: [
+                DropdownMenuItem<String>(
+                  child: Text(
+                    'English(US)',
+                    style: Styles.titleMeduim13.copyWith(color: Colors.grey),
+                  ),
+                  value: 'English(US)',
+                ),
+                DropdownMenuItem<String>(
+                  child: Text(
+                    'Arabic(AR)',
+                    style: Styles.titleMeduim13.copyWith(color: Colors.grey),
+                  ),
+                  value: 'Arabic(AR)',
+                ),
+                DropdownMenuItem<String>(
+                  child: Text(
+                    'French(FR)',
+                    style: Styles.titleMeduim13.copyWith(color: Colors.grey),
+                  ),
+                  value: 'French(FR)',
+                ),
+              ],
+              onChanged: (p) {}),
           Image.asset(
             'assets/images/Instagram logo.png',
             height: 60,
@@ -27,32 +55,36 @@ class LoginViewBody extends StatelessWidget {
           SizedBox(
             height: 32,
           ),
-          CustomTextField(
-            hintText: 'Usernmae,email or mobile number',
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          CustomTextField(
-            hintText: 'Password',
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          CustomButton(
-            labelText: 'Log in',
-            check: false,
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Forgot password?',
-              style:
-                  Styles.titleMeduim14.copyWith(color: ColorsStyles.TypoColor),
-            ),
+          Column(
+            children: [
+              CustomTextField(
+                hintText: 'Usernmae,email or mobile number',
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              CustomTextField(
+                hintText: 'Password',
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              CustomButton(
+                labelText: 'Log in',
+                check: false,
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Forgot password?',
+                  style: Styles.titleMeduim14
+                      .copyWith(color: ColorsStyles.TypoColor),
+                ),
+              ),
+            ],
           ),
           CustomButton(
             labelText: 'Create new account',
