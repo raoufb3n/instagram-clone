@@ -13,4 +13,13 @@ abstract class ColorsStyles {
       Color(0xffFFB763),
     ],
   );
+  static final gradientTwo = LinearGradient(colors: [
+    Color(0xffFFF9F2),
+    Color(0xffFBF0F9),
+    Color(0xffEFF7FE),
+  ], stops: [
+    0.1,
+    0.2,
+    0.7
+  ], begin: Alignment.topLeft, end: Alignment.topRight);
 }
