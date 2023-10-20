@@ -41,6 +41,22 @@ class LoginViewBody extends StatelessWidget {
           ),
           CustomButton(
             labelText: 'Log in',
+            check: false,
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              'Forgot password?',
+              style:
+                  Styles.titleMeduim14.copyWith(color: ColorsStyles.TypoColor),
+            ),
+          ),
+          CustomButton(
+            labelText: 'Create new account',
+            check: true,
           )
         ]),
       ),
