@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/CustomTextField.dart';
+import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/CutomButton.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -22,10 +24,23 @@ class LoginViewBody extends StatelessWidget {
             'assets/images/Instagram logo.png',
             height: 60,
           ),
-          TextField(
-            decoration: InputDecoration(
-              
-            ),
+          SizedBox(
+            height: 32,
+          ),
+          CustomTextField(
+            hintText: 'Usernmae,email or mobile number',
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          CustomTextField(
+            hintText: 'Password',
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          CustomButton(
+            labelText: 'Log in',
           )
         ]),
       ),

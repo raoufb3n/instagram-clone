@@ -4,7 +4,7 @@ abstract class ColorsStyles {
   static final TypoColor = Color(0xff000000);
   static final gry = Color(0xffC4C4C4);
   static final white = Color(0xffFFFFFF);
-  static final blue = Color(0xff1FA1FF);
+  static final blue = Color(0xff2862D7);
   static final red = Color(0xffFE0136);
   static final gradient = LinearGradient(
     colors: [
@@ -15,7 +15,7 @@ abstract class ColorsStyles {
   );
   static final gradientTwo = LinearGradient(colors: [
     Color(0xffFEFAF2),
-    Color(0xffFBF1F7 ),
+    Color(0xffFBF1F7),
     Color(0xffF0F7FE),
   ], stops: [
     0.2,
