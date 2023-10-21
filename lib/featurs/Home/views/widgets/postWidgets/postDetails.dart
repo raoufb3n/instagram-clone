@@ -16,20 +16,33 @@ class PostDetails extends StatelessWidget {
         children: [
           Text(
             '100 Likes',
-            style: Styles.displayBold13,
+            style: Styles.displayBold14,
+          ),
+          const SizedBox(
+            height: 4,
           ),
           RichText(
               text: TextSpan(children: [
             TextSpan(
                 text: 'abderraouf ',
-                style: Styles.displayBold14
-                    .copyWith(color: ColorsStyles.TypoColor)),
+                style: Styles.displayBold16.copyWith(
+                    color: ColorsStyles.TypoColor,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 15)),
             TextSpan(
                 text:
                     'Hello im a UX designer é a mobile developer,im proud to make that project.',
                 style: Styles.titleRegular13
-                    .copyWith(color: ColorsStyles.TypoColor))
-          ]))
+                    .copyWith(color: ColorsStyles.TypoColor)),
+          ])),
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            'View All 16 comments',
+            style: Styles.titleMeduim14.copyWith(color: Colors.grey),
+          ),
+       
         ],
       ),
     );
