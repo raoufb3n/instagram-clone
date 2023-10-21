@@ -49,7 +49,7 @@ class LoginViewBody extends StatelessWidget {
               ],
               onChanged: (p) {}),
           Image.asset(
-            'assets/images/Instagram logo.png',
+            'assets/images/instaLgram.png',
             height: 60,
           ),
           SizedBox(

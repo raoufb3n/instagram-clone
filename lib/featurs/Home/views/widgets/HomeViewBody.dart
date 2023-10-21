@@ -14,7 +14,7 @@ class HomeViewBody extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                'assets/images/IG logo.png',
+                'assets/images/logo.png',
               ),
               const Spacer(),
               Row(
