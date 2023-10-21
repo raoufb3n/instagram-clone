@@ -22,6 +22,15 @@ class HomeViewBody extends StatelessWidget {
                   IconButton(onPressed: () {}, icon: InstaIcons.like),
                   IconButton(onPressed: () {}, icon: InstaIcons.chat),
                 ],
+              ),
+              Stack(
+                children: [
+                  CircleAvatar(
+                    radius: 40,
+                    backgroundImage: AssetImage(
+                        'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
+                  )
+                ],
               )
             ],
           )
