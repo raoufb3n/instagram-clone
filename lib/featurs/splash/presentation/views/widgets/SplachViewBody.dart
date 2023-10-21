@@ -11,7 +11,7 @@ class SplachViewBody extends StatelessWidget {
       children: [
         Expanded(
             child: Image.asset(
-          'assets/images/Instagram logo.png',
+          'assets/images/Instagramlogo.png',
             
         )
         ),
