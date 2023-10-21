@@ -3,32 +3,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/ProfileAvatar.dart';
+import 'package:instagram_clone/featurs/Home/views/widgets/customAppBar.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-      child: Column(
+    return  Column(
         children: [
-          Row(
-            children: [
-              Image.asset(
-                'assets/images/logo.png',
-              ),
-              const Spacer(),
-              Row(
-                children: [
-                  IconButton(onPressed: () {}, icon: InstaIcons.like),
-                  IconButton(onPressed: () {}, icon: InstaIcons.chat),
-                ],
-              ),
-            ],
-          ),
+          CustomAppBar(),
           SizedBox(
-            height: 70,
+            height: 120,
             child: Row(
               children: [
                 ProfileAvatar(isUser: true),
@@ -38,7 +24,10 @@ class HomeViewBody extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: 25,
                     itemBuilder: (BuildContext context, int index) {
-                      return ProfileAvatar(isUser: false);
+                      return Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ProfileAvatar(isUser: false),
+                      );
                     },
                   ),
                 ),
@@ -46,7 +35,9 @@ class HomeViewBody extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
+      )
+    ;
   }
 }
+
+
