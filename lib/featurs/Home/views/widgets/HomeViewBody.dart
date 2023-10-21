@@ -18,19 +18,18 @@ class HomeViewBody extends StatelessWidget {
           leading: Image.asset('assets/images/logo.png'),
           leadingWidth: MediaQuery.of(context).size.width * .3,
           actions: [
-            IconButton(
-              onPressed: (){},
-               icon: InstaIcons.like
-               ),
-            IconButton(
-              onPressed: (){},
-               icon: InstaIcons.chat
-               )              
+            IconButton(onPressed: () {}, icon: InstaIcons.like),
+            IconButton(onPressed: () {}, icon: InstaIcons.chat)
           ],
         ),
         SliverToBoxAdapter(
             child: Column(
-          children: [AvatarListView()],
+          children: [
+            AvatarListView(),
+            const SizedBox(
+              height: 8,
+            )
+          ],
         )),
         SliverList(
             delegate:

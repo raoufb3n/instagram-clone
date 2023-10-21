@@ -14,29 +14,27 @@ class PostWidget extends StatelessWidget {
     return Column(
       children: [
         PostInfo(),
-      
-    
-    const SizedBox(
-      height: 4,
-    ),
-    SizedBox(
-      height: 390,
-      width: double.infinity,
-      child: AspectRatio(
-        aspectRatio: 2 / 2,
-        child: Image.asset(
-          'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg',
-          fit: BoxFit.fill,
+        const SizedBox(
+          height: 4,
         ),
-      ),
-    ),
-    PostCtas(),
-    PostDetails(),
-    const SizedBox(
-      height: 8,
-    ),
-    CommentsWidget()
-    ],
+        SizedBox(
+          height: MediaQuery.of(context).size.height * .6,
+          width: double.infinity,
+          child: AspectRatio(
+            aspectRatio: 2 / 2,
+            child: Image.asset(
+              'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg',
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+        PostCtas(),
+        PostDetails(),
+        const SizedBox(
+          height: 8,
+        ),
+        CommentsWidget()
+      ],
     );
   }
 }
