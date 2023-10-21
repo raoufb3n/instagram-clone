@@ -13,7 +13,7 @@ class AvatarListView extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 12),
         child: SizedBox(
-          height: 90,
+          height: 110,
           child: Row(
             children: [
               ProfileAvatar(isUser: true),
