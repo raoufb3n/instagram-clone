@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
+class CustomAppBarProfile extends StatelessWidget {
+  const CustomAppBarProfile({
     super.key,
   });
 

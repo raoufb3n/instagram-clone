@@ -27,4 +27,5 @@ abstract class InstaIcons {
       SvgPicture.asset('assets/icons/shopSelected.svg');
   static final SvgPicture addStory =
       SvgPicture.asset('assets/icons/addStory.svg');
+  static final Image user = Image.asset('assets/icons/user.png');
 }
