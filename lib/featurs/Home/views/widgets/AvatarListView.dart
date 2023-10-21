@@ -11,9 +11,9 @@ class AvatarListView extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: const EdgeInsets.only(left: 12),
+        padding: const EdgeInsets.only(left: 8),
         child: SizedBox(
-          height: 110,
+          height: 107,
           child: Row(
             children: [
               ProfileAvatar(isUser: true),

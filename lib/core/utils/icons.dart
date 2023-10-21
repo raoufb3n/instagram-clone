@@ -20,7 +20,7 @@ abstract class InstaIcons {
   static SvgPicture search = SvgPicture.asset('assets/icons/Search.svg');
   static SvgPicture serchSelected =
       SvgPicture.asset('assets/icons/SearchSelected.svg');
-  static SvgPicture send = SvgPicture.asset('assets/icons/Send.svg');
+  static SvgPicture send = SvgPicture.asset('assets/icons/send.svg');
   static SvgPicture shop = SvgPicture.asset('assets/icons/Shop.svg');
   static SvgPicture shopSelected =
       SvgPicture.asset('assets/icons/shopSelected.svg');
