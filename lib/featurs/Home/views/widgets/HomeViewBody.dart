@@ -1,25 +1,41 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/utils/colors.dart';
+import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/AvatarListView.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/PostListView.dart';
-import 'package:instagram_clone/featurs/Home/views/widgets/PostWidget.dart';
-import 'package:instagram_clone/featurs/Home/views/widgets/customAppBar.dart';
-
 
 class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
-
+  HomeViewBody({super.key});
+  ScrollController _controller = ScrollController();
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        CustomAppBar(),
-        AvatarListView(),
-        
-
+    return CustomScrollView(
+      shrinkWrap: true,
+      slivers: [
+        SliverAppBar(
+          backgroundColor: ColorsStyles.white,
+          floating: true,
+          leading: Image.asset('assets/images/logo.png'),
+          leadingWidth: MediaQuery.of(context).size.width * .3,
+          actions: [
+            IconButton(
+              onPressed: (){},
+               icon: InstaIcons.like
+               ),
+            IconButton(
+              onPressed: (){},
+               icon: InstaIcons.chat
+               )              
+          ],
+        ),
+        SliverToBoxAdapter(
+            child: Column(
+          children: [AvatarListView()],
+        )),
+        SliverList(
+            delegate:
+                SliverChildBuilderDelegate((context, index) => PostsListView()))
       ],
     );
   }
 }
-
-

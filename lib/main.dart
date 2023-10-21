@@ -25,7 +25,7 @@ class InstagramClone extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: SplachView(),
+      home: HomeView(),
     );
   }
 }
