@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfilePostsGrid.dart';
 
 class ProfileSwapWidget extends StatefulWidget {
   const ProfileSwapWidget({super.key});
@@ -61,6 +62,7 @@ class _ProfileSwapWidgetState extends State<ProfileSwapWidget> {
             color: Colors.black,
           ),
         ),
+         ProfilePostsGrid()
       ],
     );
   }

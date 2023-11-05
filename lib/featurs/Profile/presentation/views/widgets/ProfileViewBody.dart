@@ -3,6 +3,7 @@ import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/CustomAppBar.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfileInfo.dart';
+import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfilePostsGrid.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfileSwapWidget.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/customProfileButton.dart';
 
@@ -50,8 +51,8 @@ class ProfileViewBody extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        ProfileSwapWidget(),
-        ProfilePostsGrid(),
+        Expanded(child: ProfileSwapWidget()),
+        
       ],
     );
   }
