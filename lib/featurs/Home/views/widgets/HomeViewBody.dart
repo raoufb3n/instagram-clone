@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/AvatarListView.dart';
-import 'package:instagram_clone/featurs/Home/views/widgets/PostListView.dart';
+import 'package:instagram_clone/featurs/Home/views/widgets/PostWidget.dart';
 
 class HomeViewBody extends StatelessWidget {
-  HomeViewBody({super.key});
-  ScrollController _controller = ScrollController();
+  const HomeViewBody({super.key});
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -25,15 +24,18 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
             child: Column(
           children: [
-            AvatarListView(),
+            const AvatarListView(),
             const SizedBox(
               height: 8,
             )
           ],
         )),
-        SliverList(
-            delegate:
-                SliverChildBuilderDelegate((context, index) => PostsListView()))
+        SliverList.builder(
+          itemCount: 20,
+          itemBuilder: (BuildContext context, int index) {
+            return const PostWidget();
+          },
+        )
       ],
     );
   }

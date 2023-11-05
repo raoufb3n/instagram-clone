@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/Layout.dart';
 import 'package:instagram_clone/core/utils/routes.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/LoginView.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/RegisterView.dart';
@@ -26,7 +27,7 @@ class InstagramClone extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: ProfileView(),
+      home: const LayoutWidget(),
     );
   }
 }

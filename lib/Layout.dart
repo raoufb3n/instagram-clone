@@ -4,9 +4,12 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/featurs/AddPostStory/prisenatation/view/PostingView.dart';
 import 'package:instagram_clone/featurs/Home/views/HomeView.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/customNavBarItem.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/ProfileView.dart';
+import 'package:instagram_clone/featurs/Reels/prisentation/view/ReelsView.dart';
+import 'package:instagram_clone/featurs/Search/Presentation/view/SearchView.dart';
 
 class LayoutWidget extends StatefulWidget {
   const LayoutWidget({super.key});
@@ -19,12 +22,15 @@ class _LayoutWidgetState extends State<LayoutWidget> {
   int selectdIndex = 0;
   List<Widget>screens=[
    HomeView(),
+   SearchView(),
+   PostingView(),
+   ReelsView(),
    ProfileView(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[selectdIndex],
+      body:  screens[selectdIndex],
       bottomNavigationBar: Container(
         width: MediaQuery.of(context).size.width,
         height: 50,
