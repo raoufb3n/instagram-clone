@@ -18,12 +18,15 @@ class ProfileViewBody extends StatelessWidget {
           height: 16,
         ),
         ProfileInfo(),
+        const SizedBox(
+          height: 16,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             CustomProfileButton(
-              label: 'Follow',
-              isFoolow: false,
+              label: 'Edit Profile',
+              isFoolow: true,
             ),
             CustomProfileButton(
               label: 'Message',

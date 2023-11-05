@@ -16,18 +16,17 @@ class InstagramClone extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-       Routes.splash:(context) => SplachView(),
-       Routes.login:(context) => LoginView(),
-       Routes.register:(context) => RegisterView(),
-       Routes.home:(context) => HomeView(),
-       Routes.profile:(context) => ProfileView()
-       
+        Routes.splash: (context) => SplachView(),
+        Routes.login: (context) => LoginView(),
+        Routes.register: (context) => RegisterView(),
+        Routes.home: (context) => HomeView(),
+        Routes.profile: (context) => ProfileView()
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: LoginView(),
+      home: ProfileView(),
     );
   }
 }
