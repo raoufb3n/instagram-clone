@@ -6,7 +6,7 @@ import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/Profi
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/customProfileButton.dart';
 
 class ProfileViewBody extends StatelessWidget {
-  const ProfileViewBody({super.key});
+  ProfileViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +46,10 @@ class ProfileViewBody extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(
+          height: 16,
+        ),
+
       ],
     );
   }
