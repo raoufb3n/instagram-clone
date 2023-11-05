@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfileViewBody.dart';
 
 class ProfileView extends StatelessWidget {
