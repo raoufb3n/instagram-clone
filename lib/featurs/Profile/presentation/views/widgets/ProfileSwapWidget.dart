@@ -21,10 +21,9 @@ class _ProfileSwapWidgetState extends State<ProfileSwapWidget> {
             InkWell(
               onTap: () {
                 setState(() {
-                index = 0;
-                alignment = Alignment.centerLeft;
+                  index = 0;
+                  alignment = Alignment.centerLeft;
                 });
-
               },
               child: SvgPicture.asset(
                 index == 0
@@ -36,13 +35,14 @@ class _ProfileSwapWidgetState extends State<ProfileSwapWidget> {
             InkWell(
               onTap: () {
                 setState(() {
-                index = 1;
-                alignment = Alignment.centerRight;
+                  index = 1;
+                  alignment = Alignment.centerRight;
                 });
-
               },
               child: SvgPicture.asset(
-               index==1?'assets/icons/tagselect.svg': 'assets/icons/tagunselect.svg',
+                index == 1
+                    ? 'assets/icons/tagselect.svg'
+                    : 'assets/icons/tagunselect.svg',
                 height: 25,
               ),
             )
@@ -54,7 +54,7 @@ class _ProfileSwapWidgetState extends State<ProfileSwapWidget> {
         AnimatedAlign(
           curve: Curves.easeIn,
           alignment: alignment,
-          duration: Duration(milliseconds: 300),
+          duration: Duration(milliseconds: 200),
           child: Container(
             height: 1.5,
             width: MediaQuery.of(context).size.width / 2,
