@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+class CustomTextFields extends StatelessWidget {
+  const CustomTextFields({
     super.key,
   });
 

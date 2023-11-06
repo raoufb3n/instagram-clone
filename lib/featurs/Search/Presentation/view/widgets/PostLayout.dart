@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/featurs/Search/Presentation/view/widgets/SearchViewBody.dart';
 
@@ -22,7 +19,7 @@ class PostLayout extends StatelessWidget {
                 width: MediaQuery.of(context).size.width / 1.5,
                 child: GridView.count(
                   physics: NeverScrollableScrollPhysics(),
-                  padding: EdgeInsets.only(right: 1.5),
+                  padding: EdgeInsets.only(right: 1.5, bottom: 1.5),
                   crossAxisSpacing: 1.5,
                   mainAxisSpacing: 1.5,
                   shrinkWrap: true,
@@ -45,6 +42,29 @@ class PostLayout extends StatelessWidget {
                 ),
               )
             ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 1.5),
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height / 3.2,
+            width: MediaQuery.of(context).size.width,
+            child: GridView.count(
+              physics: NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.only(right: 1.5, bottom: 1.5),
+              crossAxisSpacing: 1.5,
+              mainAxisSpacing: 1.5,
+              shrinkWrap: true,
+              crossAxisCount: 3,
+              children: [
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+              ],
+            ),
           ),
         ),
         SizedBox(
@@ -80,7 +100,30 @@ class PostLayout extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+                Padding(
+          padding: const EdgeInsets.symmetric(vertical: 1.5),
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height / 3.2,
+            width: MediaQuery.of(context).size.width,
+            child: GridView.count(
+              physics: NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.only(right: 1.5, bottom: 1.5),
+              crossAxisSpacing: 1.5,
+              mainAxisSpacing: 1.5,
+              shrinkWrap: true,
+              crossAxisCount: 3,
+              children: [
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+                SearchImageWidget(),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
