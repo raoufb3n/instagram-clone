@@ -8,7 +8,8 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [PostLayout(), PostLayout()],
+        children: [
+          PostLayout(), PostLayout()],
       ),
     );
   }
