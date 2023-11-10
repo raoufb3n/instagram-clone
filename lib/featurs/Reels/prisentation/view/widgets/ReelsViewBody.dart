@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:video_player/video_player.dart';
 
