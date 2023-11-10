@@ -1,8 +1,7 @@
 
 
-
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
+import 'package:instagram_clone/core/extensions/extensions.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/featurs/AddPostStory/prisenatation/view/PostingView.dart';
 import 'package:instagram_clone/featurs/Home/views/HomeView.dart';
@@ -32,10 +31,10 @@ class _LayoutWidgetState extends State<LayoutWidget> {
     return Scaffold(
       body:  screens[selectdIndex],
       bottomNavigationBar: Container(
-        width: MediaQuery.of(context).size.width,
+        width:context.width,
         height: 50,
         decoration: BoxDecoration(
-            color: ColorsStyles.white,
+            color:  Colors.white,
             border: Border(top: BorderSide(color: Colors.grey, width: 0.4))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

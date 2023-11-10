@@ -1,7 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/extensions/extensions.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/core/utils/styles.dart';
 import 'package:video_player/video_player.dart';
 
 class ReelsViewBody extends StatefulWidget {
@@ -49,8 +51,8 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
         Positioned(
           top: 0,
           child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 5,
+            width: context.width,
+            height: context.height / 5,
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -65,8 +67,8 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
         Positioned(
           bottom: 0,
           child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 5,
+            width: context.width,
+            height: context.height / 5,
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               begin: Alignment.bottomCenter,
@@ -79,19 +81,50 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
           ),
         ),
         Positioned(
-            right: 24,
-            bottom: 30,
+            right: 16,
+            bottom: 24,
             child: Column(
               children: [
-                Column(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: InstaIcons.like,
-                      color: Colors.white,
-                      iconSize: 30,
-                    ),
-                  ],
+                ReelCtaItem(
+                  icon: InstaIcons.likeWhite,
+                  label: 'Like',
+                ),
+                ReelCtaItem(
+                  icon: InstaIcons.commentWhite,
+                  label: 'Comment',
+                ),
+                ReelCtaItem(
+                  icon: InstaIcons.sendWhite,
+                  label: 'Share',
+                ),
+                IconButton(onPressed: () {}, icon: InstaIcons.menuWhite)
+              ],
+            )),
+        Positioned(
+            left: 24,
+            bottom: 64,
+            child: Row(
+              children: [
+                CircleAvatar(
+                  radius: 20,
+                  backgroundImage: AssetImage(
+                      'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
+                ),
+                Text(
+                  'abderraouf',
+                  style: Styles.titleMeduim14.copyWith(color: Colors.white),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 6),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    border: Border.all(color: Colors.white, width: 0.5),
+                  ),
+                  child: Text(
+                    'Follow',
+                    style: Styles.titleMeduim14
+                        .copyWith(color: Colors.white, fontSize: 16),
+                  ),
                 )
               ],
             ))
@@ -104,7 +137,41 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
         'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4'));
 
     /// Initialize the video player
-    await _controller.initialize().then((value) => setState(() {}));
+    await _controller.initialize().then((value) => setState(() {
+          _controller.play();
+          _controller.setLooping(true);
+        }));
+  }
+}
+
+class ReelCtaItem extends StatelessWidget {
+  const ReelCtaItem({
+    super.key,
+    required this.icon,
+    required this.label,
+  });
+  final Widget icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        IconButton(
+          onPressed: () {},
+          icon: icon,
+          color: Colors.white,
+          iconSize: 30,
+        ),
+        Text(
+          label,
+          style: Styles.titleMeduim14.copyWith(color: Colors.white),
+        ),
+        const SizedBox(
+          height: 12,
+        )
+      ],
+    );
   }
 }
 
