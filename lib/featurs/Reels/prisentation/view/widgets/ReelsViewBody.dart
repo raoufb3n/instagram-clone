@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:video_player/video_player.dart';
 
 class ReelsViewBody extends StatefulWidget {
@@ -40,7 +42,6 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
           },
           onLongPressEnd: (details) {
             setState(() {
-              
               opacity = 150;
               _controller.play();
             });
@@ -78,6 +79,23 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
             )),
           ),
         ),
+        Positioned(
+            right: 24,
+            bottom: 30,
+            child: Column(
+              children: [
+                Column(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: InstaIcons.like,
+                      color: Colors.white,
+                      iconSize: 30,
+                    ),
+                  ],
+                )
+              ],
+            ))
       ],
     );
   }
@@ -95,7 +113,8 @@ class ReelPlaceHolder extends StatelessWidget {
   const ReelPlaceHolder({
     super.key,
     required VideoPlayerController controller,
-    this.onLongPress, this.onLongPressEnd,
+    this.onLongPress,
+    this.onLongPressEnd,
   }) : _controller = controller;
 
   final VideoPlayerController _controller;

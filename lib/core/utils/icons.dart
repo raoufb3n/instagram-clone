@@ -15,17 +15,17 @@ abstract class InstaIcons {
   static SvgPicture plus = SvgPicture.asset('assets/icons/plus.svg');
   static SvgPicture reels = SvgPicture.asset('assets/icons/reels.svg');
   static SvgPicture reelsSelected =
-      SvgPicture.asset('assets/icons/reelsSelected.svg');
+         SvgPicture.asset('assets/icons/reelsSelected.svg');
   static SvgPicture save = SvgPicture.asset('assets/icons/Save.svg');
   static SvgPicture saveSelected = SvgPicture.asset('assets/icons/Save-1.svg');
   static SvgPicture search = SvgPicture.asset('assets/icons/Search.svg');
   static SvgPicture serchSelected =
-      SvgPicture.asset('assets/icons/SearchSelected.svg');
+         SvgPicture.asset('assets/icons/SearchSelected.svg');
   static Image send = Image.asset('assets/icons/send.png');
   static SvgPicture shop = SvgPicture.asset('assets/icons/Shop.svg');
   static SvgPicture shopSelected =
-      SvgPicture.asset('assets/icons/shopSelected.svg');
+         SvgPicture.asset('assets/icons/shopSelected.svg');
   static final SvgPicture addStory =
-      SvgPicture.asset('assets/icons/addStory.svg');
+         SvgPicture.asset('assets/icons/addStory.svg');
   static final Image user = Image.asset('assets/icons/user.png');
 }
