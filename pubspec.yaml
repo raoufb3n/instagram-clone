@@ -33,6 +33,8 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.7
   video_player: ^2.8.1
+  
+
 
 dev_dependencies:
   flutter_lints: ^2.0.0
