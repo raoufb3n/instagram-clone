@@ -35,5 +35,7 @@ abstract class InstaIcons {
   static final SvgPicture commentWhite =
       SvgPicture.asset('assets/icons/commentWhite.svg');     
   static final SvgPicture menuWhite =
-      SvgPicture.asset('assets/icons/MenuWhite.svg');               
+      SvgPicture.asset('assets/icons/MenuWhite.svg'); 
+  static final SvgPicture music =
+      SvgPicture.asset('assets/icons/Union.svg');                  
 }

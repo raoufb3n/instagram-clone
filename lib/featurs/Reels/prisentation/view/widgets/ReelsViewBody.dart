@@ -2,8 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/CtaSection.dart';
+import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/DescWidget.dart';
+import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/ReelPlaceHolder.dart';
+import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/SongWidget.dart';
+import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/UserInfo.dart';
 import 'package:video_player/video_player.dart';
 
 class ReelsViewBody extends StatefulWidget {
@@ -56,7 +59,7 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               begin: Alignment.topCenter,
-              end: Alignment.center,
+              end: Alignment.bottomCenter,
               colors: [
                 Color.fromARGB(opacity, 0, 0, 0),
                 Color.fromARGB(0, 32, 32, 32),
@@ -72,7 +75,7 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               begin: Alignment.bottomCenter,
-              end: Alignment.center,
+              end: Alignment.topCenter,
               colors: [
                 Color.fromARGB(opacity, 0, 0, 0),
                 Color.fromARGB(0, 32, 32, 32),
@@ -83,51 +86,22 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
         Positioned(
             right: 16,
             bottom: 24,
-            child: Column(
-              children: [
-                ReelCtaItem(
-                  icon: InstaIcons.likeWhite,
-                  label: 'Like',
-                ),
-                ReelCtaItem(
-                  icon: InstaIcons.commentWhite,
-                  label: 'Comment',
-                ),
-                ReelCtaItem(
-                  icon: InstaIcons.sendWhite,
-                  label: 'Share',
-                ),
-                IconButton(onPressed: () {}, icon: InstaIcons.menuWhite)
-              ],
-            )),
+            child: CtaSection()),
         Positioned(
             left: 24,
-            bottom: 64,
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage(
-                      'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
-                ),
-                Text(
-                  'abderraouf',
-                  style: Styles.titleMeduim14.copyWith(color: Colors.white),
-                ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 6),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(7),
-                    border: Border.all(color: Colors.white, width: 0.5),
-                  ),
-                  child: Text(
-                    'Follow',
-                    style: Styles.titleMeduim14
-                        .copyWith(color: Colors.white, fontSize: 16),
-                  ),
-                )
-              ],
-            ))
+            bottom: 32,
+            child: SizedBox(
+              height: context.height / 7.8,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  UserInfo(),
+                  DescWidget(),
+                  SongWidget()
+                ],
+              ),
+            )),
       ],
     );
   }
@@ -144,64 +118,14 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
   }
 }
 
-class ReelCtaItem extends StatelessWidget {
-  const ReelCtaItem({
-    super.key,
-    required this.icon,
-    required this.label,
-  });
-  final Widget icon;
-  final String label;
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        IconButton(
-          onPressed: () {},
-          icon: icon,
-          color: Colors.white,
-          iconSize: 30,
-        ),
-        Text(
-          label,
-          style: Styles.titleMeduim14.copyWith(color: Colors.white),
-        ),
-        const SizedBox(
-          height: 12,
-        )
-      ],
-    );
-  }
-}
 
-class ReelPlaceHolder extends StatelessWidget {
-  const ReelPlaceHolder({
-    super.key,
-    required VideoPlayerController controller,
-    this.onLongPress,
-    this.onLongPressEnd,
-  }) : _controller = controller;
 
-  final VideoPlayerController _controller;
-  final Function()? onLongPress;
-  final Function(LongPressEndDetails)? onLongPressEnd;
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: GestureDetector(
-        onLongPressEnd: onLongPressEnd,
-        onLongPress: onLongPress,
-        onTap: () => _controller.value.isPlaying
-            ? _controller.pause()
-            : _controller.play(),
-        child: AspectRatio(
-          aspectRatio: 2 / 4,
-          child: VideoPlayer(_controller),
-        ),
-      ),
-    );
-  }
-}
+
+
+
+
+
+
+
