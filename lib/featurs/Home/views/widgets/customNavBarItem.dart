@@ -8,11 +8,11 @@ class CustomNavBarItem extends StatelessWidget {
       required this.onPressed,
       required this.selected});
   void Function()? onPressed;
-  Widget icon;
-  Widget icon2;
+ final  Widget icon;
+ final Widget icon2;
   bool selected;
   @override
   Widget build(BuildContext context) {
-    return IconButton(onPressed: onPressed, icon: selected ? icon2 : icon);
+    return  IconButton(onPressed: onPressed, icon: selected ? icon2 : icon);
   }
 }

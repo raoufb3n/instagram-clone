@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cached_video_player/cached_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
 import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/CtaSection.dart';
@@ -7,7 +8,6 @@ import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/DescWidg
 import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/ReelPlaceHolder.dart';
 import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/SongWidget.dart';
 import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/UserInfo.dart';
-import 'package:video_player/video_player.dart';
 
 class ReelsViewBody extends StatefulWidget {
   const ReelsViewBody({super.key});
@@ -17,7 +17,7 @@ class ReelsViewBody extends StatefulWidget {
 }
 
 class _ReelsViewBodyState extends State<ReelsViewBody> {
-  late VideoPlayerController _controller;
+  late CachedVideoPlayerController _controller;
   int opacity = 150;
   @override
   void initState() {
@@ -107,8 +107,8 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
   }
 
   void _initVideoPlayer() async {
-    _controller = VideoPlayerController.networkUrl(Uri.parse(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4'));
+    _controller = CachedVideoPlayerController.network(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
 
     /// Initialize the video player
     await _controller.initialize().then((value) => setState(() {

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
 
@@ -11,6 +10,10 @@ class CustomTextFields extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
+          prefixIcon: Icon(
+            Icons.search,
+            color: Colors.grey[500],
+          ),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(7),
               borderSide: BorderSide.none),
@@ -18,9 +21,9 @@ class CustomTextFields extends StatelessWidget {
               borderRadius: BorderRadius.circular(7),
               borderSide: BorderSide.none),
           hintText: 'Search',
-          hintStyle: Styles.titleMeduim13.copyWith(color: Colors.white),
+          hintStyle: Styles.titleMeduim13.copyWith(color: Colors.grey[500]),
           filled: true,
-          fillColor: Colors.grey[300]),
+          fillColor: Colors.grey[200]),
     );
   }
 }
