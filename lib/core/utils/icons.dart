@@ -33,9 +33,9 @@ abstract class InstaIcons {
   static final SvgPicture sendWhite =
       SvgPicture.asset('assets/icons/SendWhite.svg');
   static final SvgPicture commentWhite =
-      SvgPicture.asset('assets/icons/commentWhite.svg');     
+      SvgPicture.asset('assets/icons/commentWhite.svg');
   static final SvgPicture menuWhite =
-      SvgPicture.asset('assets/icons/MenuWhite.svg'); 
-  static final SvgPicture music =
-      SvgPicture.asset('assets/icons/Union.svg');                  
+      SvgPicture.asset('assets/icons/MenuWhite.svg');
+  static final SvgPicture music = SvgPicture.asset('assets/icons/Union.svg');
+  static final SvgPicture bigHeart = SvgPicture.asset('assets/icons/PostHeart.svg');
 }

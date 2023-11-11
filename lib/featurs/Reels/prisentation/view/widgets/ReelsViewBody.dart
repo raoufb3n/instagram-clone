@@ -113,6 +113,7 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
     /// Initialize the video player
     await _controller.initialize().then((value) => setState(() {
           _controller.play();
+          
           _controller.setLooping(true);
          
         }));
