@@ -5,6 +5,8 @@ import 'package:instagram_clone/featurs/Auth/presentaion/views/LoginView.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/RegisterView.dart';
 import 'package:instagram_clone/featurs/Home/views/HomeView.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/ProfileView.dart';
+import 'package:instagram_clone/featurs/Search/Presentation/view/SearchView.dart';
+import 'package:instagram_clone/featurs/Story/Presentation/view/StoryView.dart';
 import 'package:instagram_clone/featurs/splash/presentation/views/SplashView.dart';
 
 void main() {
@@ -27,7 +29,7 @@ class InstagramClone extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const LayoutWidget(),
+      home: const StoryView(),
     );
   }
 }
