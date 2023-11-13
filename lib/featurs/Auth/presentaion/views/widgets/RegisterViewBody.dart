@@ -10,7 +10,6 @@ class RegisterViewBody extends StatefulWidget {
 }
 
 class _RegisterViewBodyState extends State<RegisterViewBody> {
-  TextEditingController _controller = TextEditingController();
   PageController _pageController = PageController();
 
   @override
