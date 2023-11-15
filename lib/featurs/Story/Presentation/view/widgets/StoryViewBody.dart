@@ -25,6 +25,20 @@ class _StoryViewBodyState extends State<StoryViewBody>
     _animation =
         Tween<double>(begin: 230, end: 1.8).animate(_animationController);
     _animationController.forward();
+    _animationController.addListener(() {
+      setState(() {
+        if (_animationController.status == AnimationStatus.completed) {
+          Navigator.pop(context);
+        }
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _animationController.dispose();
   }
 
   @override

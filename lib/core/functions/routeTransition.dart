@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-Route _createRoute(Widget Screen) {
+
+abstract class RouteTransition{
+static Route createRoute(Widget Screen) {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Screen,
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
@@ -14,3 +16,6 @@ Route _createRoute(Widget Screen) {
     },
   );
 }
+}
+
+

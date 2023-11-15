@@ -4,8 +4,9 @@ import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/core/utils/styles.dart';
 
 class ProfileAvatar extends StatelessWidget {
-  ProfileAvatar({super.key, required this.isUser});
-  bool isUser;
+   ProfileAvatar({super.key, required this.isUser,this.onTap});
+  final bool isUser;
+  void Function()? onTap=()=>{};
   @override
   Widget build(BuildContext context) {
     if (isUser == true) {
@@ -57,27 +58,30 @@ class ProfileAvatar extends StatelessWidget {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                height: 78,
-                width: 78,
-                decoration: BoxDecoration(
-                  gradient: ColorsStyles.gradient,
-                  shape: BoxShape.circle,
+          GestureDetector(
+            onTap: onTap,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: 78,
+                  width: 78,
+                  decoration: BoxDecoration(
+                    gradient: ColorsStyles.gradient,
+                    shape: BoxShape.circle,
+                  ),
                 ),
-              ),
-              CircleAvatar(
-                radius: 36,
-                backgroundColor: ColorsStyles.white,
-              ),
-              CircleAvatar(
-                radius: 34,
-                backgroundImage: AssetImage(
-                    'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
-              )
-            ],
+                CircleAvatar(
+                  radius: 36,
+                  backgroundColor: ColorsStyles.white,
+                ),
+                CircleAvatar(
+                  radius: 34,
+                  backgroundImage: AssetImage(
+                      'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
+                )
+              ],
+            ),
           ),
           SizedBox(
             width: 90,

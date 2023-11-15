@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/functions/routeTransition.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/ProfileAvatar.dart';
+import 'package:instagram_clone/featurs/Story/Presentation/view/StoryView.dart';
 
 class AvatarListView extends StatelessWidget {
   const AvatarListView({
@@ -25,7 +27,9 @@ class AvatarListView extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: ProfileAvatar(isUser: false),
+                    child: ProfileAvatar(isUser: false,onTap: () {
+                      Navigator.push(context, RouteTransition.createRoute(StoryView()));
+                    },),
                   );
                 },
               )
