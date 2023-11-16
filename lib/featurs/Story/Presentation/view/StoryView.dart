@@ -8,7 +8,7 @@ class StoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.black,
-      body: SafeArea(child: StoryViewBody()),
+      body: SafeArea(child:StoryViewBody()),
     );
   }
 }

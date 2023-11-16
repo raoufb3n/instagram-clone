@@ -3,7 +3,7 @@ import 'package:instagram_clone/core/utils/colors.dart';
 
 class PostAvatar extends StatelessWidget {
   PostAvatar({super.key, required this.isStory});
-  bool isStory;
+  final bool isStory;
   @override
   Widget build(BuildContext context) {
     return Stack(

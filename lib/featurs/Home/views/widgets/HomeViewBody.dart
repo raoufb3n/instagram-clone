@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/extensions/extensions.dart';
 import 'package:instagram_clone/core/utils/colors.dart';
 import 'package:instagram_clone/core/utils/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/AvatarListView.dart';
@@ -15,7 +16,7 @@ class HomeViewBody extends StatelessWidget {
           backgroundColor: ColorsStyles.white,
           floating: true,
           leading: Image.asset('assets/images/logo.png'),
-          leadingWidth: MediaQuery.of(context).size.width * .3,
+          leadingWidth: context.width * .3,
           actions: [
             IconButton(onPressed: () {}, icon: InstaIcons.like),
             IconButton(onPressed: () {}, icon: InstaIcons.chat)

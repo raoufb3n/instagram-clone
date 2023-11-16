@@ -5,7 +5,7 @@ import 'package:instagram_clone/core/utils/styles.dart';
 class CustomProfileButton extends StatelessWidget {
   CustomProfileButton({super.key, required this.label, required this.isFoolow});
   final String label;
-  bool isFoolow;
+  final bool isFoolow;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(

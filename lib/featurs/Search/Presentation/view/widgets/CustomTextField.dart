@@ -8,7 +8,7 @@ class CustomTextFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return  TextField(
       decoration: InputDecoration(
           prefixIcon: Icon(
             Icons.search,
