@@ -6,13 +6,12 @@ class ReelsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: SafeArea(
           child: PageView.builder(
-            
               scrollDirection: Axis.vertical,
               itemCount: 10,
-              itemBuilder: (contex, index) => ReelsViewBody())),
+              itemBuilder: (contex, index) =>const ReelsViewBody())),
     );
   }
 }

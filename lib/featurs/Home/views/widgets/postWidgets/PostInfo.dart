@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/styles.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/postWidgets/postAvatar.dart';
 
 class PostInfo extends StatelessWidget {

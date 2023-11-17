@@ -2,8 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/styles.dart';
+
 
 class StoryViewBody extends StatefulWidget {
   const StoryViewBody({super.key});
@@ -34,8 +35,8 @@ class _StoryViewBodyState extends State<StoryViewBody>
 
   @override
   void dispose() {
-    super.dispose();
     _animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -98,71 +99,88 @@ class _StoryViewBodyState extends State<StoryViewBody>
             top: 16,
             right: 0,
             left: 0,
-            child: AnimatedOpacity(
-              opacity: opacity,
-              duration: Duration(milliseconds: 300),
-              child: Column(
-                children: [
-                  Column(
+            child: Stack(
+              children: [
+                Positioned(
+                  right: 16,
+                  left: 16,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(100)),
+                    padding: const EdgeInsets.only(left: 16),
+                    alignment: Alignment.center,
+                    width: context.width / 1.05,
+                    height: 3,
+                  ),
+                ),
+                AnimatedOpacity(
+                  opacity: opacity,
+                  duration: Duration(milliseconds: 300),
+                  child: Column(
                     children: [
-                      Container(
-                        width: context.width / 1.05,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100)),
-                        child: SlideTransition(
-                          position: Tween<Offset>(
-                                  begin: Offset(-1, 0), end: Offset.zero)
-                              .animate(_animationController),
-                          child: Container(
-                            alignment: Alignment.center,
+                      Column(
+                        children: [
+                          Container(
                             width: context.width / 1.05,
-                            height: 3,
-                            color: Colors.white,
+                            clipBehavior: Clip.antiAlias,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100)),
+                            child: SlideTransition(
+                              position: Tween<Offset>(
+                                      begin: Offset(-1, 0), end: Offset.zero)
+                                  .animate(_animationController),
+                              child: Container(
+                                alignment: Alignment.center,
+                                width: context.width / 1.05,
+                                height: 3,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 18,
+                              backgroundImage: AssetImage(
+                                  'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Text(
+                              'Abderraouf',
+                              style: Styles.titleMeduim13
+                                  .copyWith(color: Colors.white, fontSize: 15),
+                            ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            Text(
+                              '10min',
+                              style: Styles.titleMeduim14
+                                  .copyWith(color: Colors.grey[300]),
+                            ),
+                            const Spacer(),
+                            Transform.rotate(
+                              angle: pi / 2,
+                              child: GestureDetector(
+                                  onTap: () {}, child: InstaIcons.menuWhite),
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 18,
-                          backgroundImage: AssetImage(
-                              'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
-                        ),
-                        const SizedBox(
-                          width: 12,
-                        ),
-                        Text(
-                          'Abderraouf',
-                          style: Styles.titleMeduim13
-                              .copyWith(color: Colors.white, fontSize: 15),
-                        ),
-                        const SizedBox(
-                          width: 6,
-                        ),
-                        Text(
-                          '10min',
-                          style: Styles.titleMeduim14
-                              .copyWith(color: Colors.grey[300]),
-                        ),
-                        const Spacer(),
-                        Transform.rotate(
-                          angle: pi / 2,
-                          child: GestureDetector(
-                              onTap: () {}, child: InstaIcons.menuWhite),
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                ),
+              ],
             ),
           ),
           Positioned(

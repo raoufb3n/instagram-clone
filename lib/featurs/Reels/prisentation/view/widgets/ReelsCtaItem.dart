@@ -1,7 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/core/utils/Theme/styles.dart';
+
 
 class ReelCtaItem extends StatelessWidget {
   const ReelCtaItem({

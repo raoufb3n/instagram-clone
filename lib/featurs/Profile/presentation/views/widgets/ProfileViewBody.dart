@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/colors.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/CustomAppBar.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfileInfo.dart';
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/ProfileSwapWidget.dart';

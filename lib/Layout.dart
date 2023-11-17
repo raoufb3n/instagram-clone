@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/featurs/AddPostStory/prisenatation/view/PostingView.dart';
 import 'package:instagram_clone/featurs/Home/views/HomeView.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/customNavBarItem.dart';

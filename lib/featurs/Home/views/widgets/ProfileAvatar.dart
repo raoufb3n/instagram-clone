@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/core/utils/Theme/colors.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/styles.dart';
 
 class ProfileAvatar extends StatelessWidget {
-   ProfileAvatar({super.key, required this.isUser,this.onTap});
+  ProfileAvatar({super.key, required this.isUser, this.onTap});
   final bool isUser;
-  void Function()? onTap=()=>{};
+  void Function()? onTap = () => {};
+
   @override
   Widget build(BuildContext context) {
     if (isUser == true) {
-      return  Column(
+      return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -60,28 +61,29 @@ class ProfileAvatar extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: onTap,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  height: 78,
-                  width: 78,
-                  decoration: BoxDecoration(
-                    gradient: ColorsStyles.gradient,
-                    shape: BoxShape.circle,
+           child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    height: 78,
+                    width: 78,
+                    decoration: BoxDecoration(
+                      gradient: ColorsStyles.gradient,
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-                CircleAvatar(
-                  radius: 36,
-                  backgroundColor: ColorsStyles.white,
-                ),
-                CircleAvatar(
-                  radius: 34,
-                  backgroundImage: AssetImage(
-                      'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
-                )
-              ],
-            ),
+                  CircleAvatar(
+                    radius: 36,
+                    backgroundColor: ColorsStyles.white,
+                  ),
+                  CircleAvatar(
+                    radius: 34,
+                    backgroundImage: AssetImage(
+                        'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
+                  )
+                ],
+              ),
+            
           ),
           SizedBox(
             width: 90,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
+import 'package:instagram_clone/core/utils/Theme/colors.dart';
+
 
 class PostAvatar extends StatelessWidget {
-  PostAvatar({super.key, required this.isStory});
+ const PostAvatar({super.key, required this.isStory});
   final bool isStory;
   @override
   Widget build(BuildContext context) {

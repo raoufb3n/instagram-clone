@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/PostWidget.dart';
 
 class PostsListView extends StatelessWidget {
-   PostsListView({
+  const  PostsListView({
     super.key,
   });
  

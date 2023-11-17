@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
-import 'package:instagram_clone/core/utils/styles.dart';
+import 'package:instagram_clone/core/utils/Theme/colors.dart';
+import 'package:instagram_clone/core/utils/Theme/styles.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/CustomTextField.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/CutomButton.dart';
 

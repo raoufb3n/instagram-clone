@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/featurs/Reels/prisentation/view/widgets/ReelsCtaItem.dart';
 
 class CtaSection extends StatelessWidget {

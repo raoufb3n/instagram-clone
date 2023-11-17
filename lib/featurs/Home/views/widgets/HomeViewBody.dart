@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/colors.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/AvatarListView.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/PostWidget.dart';
 
@@ -10,7 +10,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      shrinkWrap: true,
+     
       slivers: [
         SliverAppBar(
           backgroundColor: ColorsStyles.white,
@@ -25,6 +25,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
             child: Column(
           children: [
+            
             const AvatarListView(),
             const SizedBox(
               height: 8,

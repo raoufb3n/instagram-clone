@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/routes.dart';
+import 'package:instagram_clone/core/utils/Theme/routes.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/PageViewItem.dart';
 
 class RegisterViewBody extends StatefulWidget {

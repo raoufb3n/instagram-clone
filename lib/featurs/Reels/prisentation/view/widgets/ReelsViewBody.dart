@@ -86,20 +86,27 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
         Positioned(
             right: 16,
             bottom: 24,
-            child: CtaSection()),
+            child: AnimatedOpacity(
+              opacity: opacity /150,
+              duration: Duration(milliseconds: 300),
+              child: CtaSection())),
         Positioned(
             left: 24,
             bottom: 32,
-            child: SizedBox(
-              height: context.height / 7.8,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  UserInfo(),
-                  DescWidget(),
-                  SongWidget()
-                ],
+            child: AnimatedOpacity(
+              opacity: opacity /150,
+              duration: Duration(milliseconds: 300),
+              child: SizedBox(
+                height: context.height / 7.8,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    UserInfo(),
+                    DescWidget(),
+                    SongWidget()
+                  ],
+                ),
               ),
             )),
       ],

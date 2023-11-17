@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/core/utils/colors.dart';
+import 'package:instagram_clone/core/utils/Theme/colors.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/HomeViewBody.dart';
 
 class HomeView extends StatelessWidget {

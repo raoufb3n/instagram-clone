@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomNavBarItem extends StatelessWidget {
-  CustomNavBarItem(
+ const CustomNavBarItem(
       {super.key,
       required this.icon,
       required this.icon2,
       required this.onPressed,
       required this.selected});
-  void Function()? onPressed;
+ final void Function()? onPressed;
  final  Widget icon;
  final Widget icon2;
-  bool selected;
+ final bool selected;
   @override
   Widget build(BuildContext context) {
     return  IconButton(onPressed: onPressed, icon: selected ? icon2 : icon);

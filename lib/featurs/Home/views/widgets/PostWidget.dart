@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
-import 'package:instagram_clone/core/utils/icons.dart';
+import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/postWidgets/PostCta.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/postWidgets/PostInfo.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/postWidgets/commentWidget.dart';
@@ -23,7 +23,7 @@ class _PostWidgetState extends State<PostWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        PostInfo(),
+        const PostInfo(),
         const SizedBox(
           height: 4,
         ),
@@ -32,7 +32,7 @@ class _PostWidgetState extends State<PostWidget> {
             setState(() {
               opacity = 1;
               scale = 1;
-              Future.delayed(const Duration(seconds: 2), () {
+              Future.delayed(const Duration(milliseconds: 1200), () {
                 setState(() {
                   opacity = 0;
                   scale = 0;
@@ -53,40 +53,58 @@ class _PostWidgetState extends State<PostWidget> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: context.height * .6,
-                width: double.infinity,
-                child: AnimatedOpacity(
-                  curve: Curves.linear,
-                  opacity: opacity,
-                  duration: const Duration(seconds: 1),
-                  child: Stack(
-                    children: [
-                      Container(
-                        height: context.height * .6,
-                        color: Colors.black.withOpacity(.2),
-                      ),
-                      Center(
-                        child: AnimatedScale(
-                            curve: Curves.bounceIn,
-                            duration: Duration(seconds: 1),
-                            scale: scale,
-                            child: InstaIcons.bigHeart),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              LikeAnimation(opacity: opacity, scale: scale),
             ],
           ),
         ),
-        PostCtas(),
-        PostDetails(),
+        const PostCtas(),
+        const PostDetails(),
         const SizedBox(
           height: 8,
         ),
-        CommentsWidget()
+        const CommentsWidget()
       ],
+    );
+  }
+}
+
+
+
+class LikeAnimation extends StatelessWidget {
+  const LikeAnimation({
+    super.key,
+    required this.opacity,
+    required this.scale,
+  });
+
+  final double opacity;
+  final double scale;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: context.height * .6,
+      width: double.infinity,
+      child: AnimatedOpacity(
+        curve: Curves.linear,
+        opacity: opacity,
+        duration: const Duration(seconds: 1),
+        child: Stack(
+          children: [
+            Container(
+              height: context.height * .6,
+              color: Colors.black.withOpacity(.2),
+            ),
+            Center(
+              child: AnimatedScale(
+                  curve: Curves.easeIn,
+                  duration: Duration(milliseconds: 700),
+                  scale: scale,
+                  child: InstaIcons.bigHeart),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
