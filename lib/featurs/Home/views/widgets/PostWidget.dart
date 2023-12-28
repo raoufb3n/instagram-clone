@@ -98,7 +98,7 @@ class LikeAnimation extends StatelessWidget {
             Center(
               child: AnimatedScale(
                   curve: Curves.easeIn,
-                  duration: Duration(milliseconds: 700),
+                  duration:const Duration(milliseconds: 700),
                   scale: scale,
                   child: InstaIcons.bigHeart),
             )

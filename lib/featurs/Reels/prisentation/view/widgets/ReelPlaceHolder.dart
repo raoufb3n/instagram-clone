@@ -33,7 +33,7 @@ class ReelPlaceHolder extends StatelessWidget {
                 width: context.width,
                 height: context.height,
                 color: Colors.grey,
-                child: SizedBox(
+                child:const SizedBox(
                     height: 20,
                     width: 20,
                     

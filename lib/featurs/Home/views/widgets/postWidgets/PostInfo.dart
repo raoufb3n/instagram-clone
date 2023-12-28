@@ -15,7 +15,7 @@ class PostInfo extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          PostAvatar(
+         const PostAvatar(
             isStory: true,
           ),
           const SizedBox(

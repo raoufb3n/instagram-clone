@@ -4,18 +4,18 @@ import 'package:instagram_clone/core/utils/Theme/styles.dart';
 
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField(
+ const CustomTextField(
       {required this.hintText,
-      this.obsecure,
+      this.obsecure=false,
       super.key,
       this.icon,
       this.onPressed,
       this.controller});
   final String hintText;
-  bool? obsecure = false;
-  void Function()? onPressed;
-  IconData? icon;
-  TextEditingController? controller;
+  final bool? obsecure;
+  final void Function()? onPressed;
+  final IconData? icon;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -28,7 +28,7 @@ class CustomTextField extends StatelessWidget {
                   icon: Icon(icon!),
                   iconSize: 5,
                 )
-              : SizedBox(
+              :const SizedBox(
                   height: 5,
                 ),
           hintText: hintText,
@@ -37,10 +37,10 @@ class CustomTextField extends StatelessWidget {
           filled: true,
           fillColor: ColorsStyles.white,
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(13)),
+              borderRadius:const BorderRadius.all(Radius.circular(13)),
               borderSide: BorderSide(color: ColorsStyles.gry)),
           focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(13)),
+              borderRadius:const BorderRadius.all(Radius.circular(13)),
               borderSide: BorderSide(color: ColorsStyles.blue))),
     );
   }

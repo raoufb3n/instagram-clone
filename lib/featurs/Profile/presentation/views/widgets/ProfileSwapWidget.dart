@@ -62,7 +62,7 @@ class _ProfileSwapWidgetState extends State<ProfileSwapWidget> {
             color: Colors.black,
           ),
         ),
-         ProfilePostsGrid()
+        const ProfilePostsGrid()
       ],
     );
   }

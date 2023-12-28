@@ -14,7 +14,7 @@ class CommentsWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Row(
           children: [
-            CircleAvatar(
+           const CircleAvatar(
               radius: 13,
               backgroundImage: AssetImage(
                   'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),

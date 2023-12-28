@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/extensions/extensions.dart';
 import 'package:instagram_clone/core/utils/Theme/icons.dart';
@@ -19,7 +18,7 @@ class LayoutWidget extends StatefulWidget {
 
 class _LayoutWidgetState extends State<LayoutWidget> {
   int selectdIndex = 0;
-  List<Widget>screens=[
+  List<Widget>screens=const[
    HomeView(),
    SearchView(),
    PostingView(),
@@ -33,7 +32,7 @@ class _LayoutWidgetState extends State<LayoutWidget> {
       bottomNavigationBar: Container(
         width:context.width,
         height: 50,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
             color:  Colors.white,
             border: Border(top: BorderSide(color: Colors.grey, width: 0.4))),
         child: Row(
@@ -76,8 +75,8 @@ class _LayoutWidgetState extends State<LayoutWidget> {
                 },
                 selected: selectdIndex == 3 ? true : false),
             CustomNavBarItem(
-                icon: CircleAvatar(radius: 17),
-                icon2: CircleAvatar(radius: 17),
+                icon:const CircleAvatar(radius: 17),
+                icon2:const CircleAvatar(radius: 17),
                 onPressed: () {
                   setState(() {
                     selectdIndex = 4;

@@ -26,7 +26,7 @@ class PostAvatar extends StatelessWidget {
           radius: 19,
           backgroundColor: ColorsStyles.white,
         ),
-        CircleAvatar(
+        const CircleAvatar(
           radius: 17,
           backgroundImage:
               AssetImage('assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),

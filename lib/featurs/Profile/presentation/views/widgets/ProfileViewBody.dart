@@ -7,29 +7,29 @@ import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/Profi
 import 'package:instagram_clone/featurs/Profile/presentation/views/widgets/customProfileButton.dart';
 
 class ProfileViewBody extends StatelessWidget {
-  ProfileViewBody({super.key});
+ const ProfileViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomAppBarProfile(),
+        const CustomAppBarProfile(),
         const SizedBox(
           height: 16,
         ),
-        ProfileInfo(),
+       const ProfileInfo(),
         const SizedBox(
           height: 16,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            CustomProfileButton(
+           const CustomProfileButton(
               label: 'Edit Profile',
               isFoolow: true,
             ),
-            CustomProfileButton(
+           const CustomProfileButton(
               label: 'Message',
               isFoolow: true,
             ),
@@ -50,7 +50,7 @@ class ProfileViewBody extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        Expanded(child: ProfileSwapWidget()),
+       const Expanded(child: ProfileSwapWidget()),
         
       ],
     );

@@ -7,18 +7,18 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+    return const CustomScrollView(
       slivers: [
         SliverAppBar(
           backgroundColor: Colors.white,
           floating: true,
-          title: const SizedBox(
+          title:  SizedBox(
             height: 38,
             child: CustomTextFields(),
           ),
         ),
         SliverToBoxAdapter(
-          child: const PostLayout(),
+          child:  PostLayout(),
         )
       ],
     );

@@ -10,11 +10,11 @@ class PostsListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics:const NeverScrollableScrollPhysics(),
         itemCount: 15,
         itemBuilder: (context, indec) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 12),
+          return const Padding(
+            padding:  EdgeInsets.only(bottom: 12),
             child: PostWidget(),
           );
         });

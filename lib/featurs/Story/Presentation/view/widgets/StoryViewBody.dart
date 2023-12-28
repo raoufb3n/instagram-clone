@@ -19,10 +19,8 @@ class _StoryViewBodyState extends State<StoryViewBody>
   double opacity = 1;
   @override
   void initState() {
-    // TODO: implement initState
-    super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 5));
+      _animationController =
+        AnimationController(vsync: this, duration:const Duration(seconds: 5));
     _animationController.forward();
     _animationController.addListener(() {
       setState(() {
@@ -31,6 +29,8 @@ class _StoryViewBodyState extends State<StoryViewBody>
         }
       });
     });
+    super.initState();
+ 
   }
 
   @override
@@ -62,7 +62,7 @@ class _StoryViewBodyState extends State<StoryViewBody>
             },
             child: Container(
               clipBehavior: Clip.antiAliasWithSaveLayer,
-              decoration: BoxDecoration(
+              decoration:const BoxDecoration(
                 borderRadius: BorderRadius.vertical(bottom: Radius.circular(5)),
               ),
               height: context.height / 1.14,
@@ -79,15 +79,15 @@ class _StoryViewBodyState extends State<StoryViewBody>
             top: 0,
             child: AnimatedOpacity(
               opacity: opacity,
-              duration: Duration(milliseconds: 300),
+              duration:const Duration(milliseconds: 300),
               child: Container(
                 width: context.width,
                 height: context.height / 5,
-                decoration: BoxDecoration(
+                decoration:const BoxDecoration(
                     gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.center,
-                  colors: const [
+                  colors:  [
                     Color.fromARGB(100, 0, 0, 0),
                     Color.fromARGB(0, 32, 32, 32),
                   ],
@@ -116,7 +116,7 @@ class _StoryViewBodyState extends State<StoryViewBody>
                 ),
                 AnimatedOpacity(
                   opacity: opacity,
-                  duration: Duration(milliseconds: 300),
+                  duration:const Duration(milliseconds: 300),
                   child: Column(
                     children: [
                       Column(
@@ -128,7 +128,7 @@ class _StoryViewBodyState extends State<StoryViewBody>
                                 borderRadius: BorderRadius.circular(100)),
                             child: SlideTransition(
                               position: Tween<Offset>(
-                                      begin: Offset(-1, 0), end: Offset.zero)
+                                      begin:const Offset(-1, 0), end: Offset.zero)
                                   .animate(_animationController),
                               child: Container(
                                 alignment: Alignment.center,
@@ -147,7 +147,7 @@ class _StoryViewBodyState extends State<StoryViewBody>
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Row(
                           children: [
-                            CircleAvatar(
+                           const CircleAvatar(
                               radius: 18,
                               backgroundImage: AssetImage(
                                   'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
@@ -188,11 +188,11 @@ class _StoryViewBodyState extends State<StoryViewBody>
               width: context.width,
               child: AnimatedOpacity(
                 opacity: opacity,
-                duration: Duration(milliseconds: 300),
+                duration:const Duration(milliseconds: 300),
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.only(left: 16),
+                      padding:const EdgeInsets.only(left: 16),
                       width: context.width / 1.35,
                       height: context.height / 20,
                       child: TextField(
@@ -206,7 +206,7 @@ class _StoryViewBodyState extends State<StoryViewBody>
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(100),
                               borderSide:
-                                  BorderSide(color: Colors.white, width: 0.85)),
+                                 const BorderSide(color: Colors.white, width: 0.85)),
                         ),
                       ),
                     ),

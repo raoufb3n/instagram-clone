@@ -22,12 +22,11 @@ class HomeViewBody extends StatelessWidget {
             IconButton(onPressed: () {}, icon: InstaIcons.chat)
           ],
         ),
-        SliverToBoxAdapter(
+       const  SliverToBoxAdapter(
             child: Column(
           children: [
-            
-            const AvatarListView(),
-            const SizedBox(
+             AvatarListView(),
+             SizedBox(
               height: 8,
             )
           ],

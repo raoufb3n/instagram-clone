@@ -4,9 +4,9 @@ import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/core/utils/Theme/styles.dart';
 
 class ProfileAvatar extends StatelessWidget {
-  ProfileAvatar({super.key, required this.isUser, this.onTap});
+ const ProfileAvatar({super.key, required this.isUser, this.onTap});
   final bool isUser;
-  void Function()? onTap = () => {};
+  final void Function()? onTap ;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class ProfileAvatar extends StatelessWidget {
         children: [
           Stack(
             children: [
-              CircleAvatar(
+             const CircleAvatar(
                 radius: 37,
                 backgroundImage: AssetImage(
                     'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
@@ -76,7 +76,7 @@ class ProfileAvatar extends StatelessWidget {
                     radius: 36,
                     backgroundColor: ColorsStyles.white,
                   ),
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 34,
                     backgroundImage: AssetImage(
                         'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),

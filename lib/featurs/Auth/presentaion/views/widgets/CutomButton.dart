@@ -4,10 +4,10 @@ import 'package:instagram_clone/core/utils/Theme/styles.dart';
 
 
 class CustomButton extends StatelessWidget {
-  CustomButton({super.key, required this.labelText, required this.check,required this.onPressed});
+  const CustomButton({super.key, required this.labelText, required this.check,required this.onPressed});
   final String labelText;
-  bool check;
-  void Function()? onPressed;
+  final bool check;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(

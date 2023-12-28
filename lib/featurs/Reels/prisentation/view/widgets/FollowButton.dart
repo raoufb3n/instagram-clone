@@ -13,7 +13,7 @@ class FollowButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6),
+        padding:const EdgeInsets.symmetric(horizontal: 6),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
           border: Border.all(color: Colors.white, width: 0.8),

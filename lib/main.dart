@@ -8,7 +8,7 @@ import 'package:instagram_clone/featurs/Profile/presentation/views/ProfileView.d
 import 'package:instagram_clone/featurs/splash/presentation/views/SplashView.dart';
 
 void main() {
-  runApp(InstagramClone());
+  runApp(const InstagramClone());
 }
 
 class InstagramClone extends StatelessWidget {
@@ -17,17 +17,18 @@ class InstagramClone extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        Routes.splash: (context) => SplachView(),
-        Routes.login: (context) => LoginView(),
-        Routes.register: (context) => RegisterView(),
-        Routes.home: (context) => HomeView(),
-        Routes.profile: (context) => ProfileView()
+        Routes.splash: (context) =>const SplachView(),
+        Routes.login: (context) =>const LoginView(),
+        Routes.register: (context) =>const RegisterView(),
+        Routes.home: (context) =>const HomeView(),
+        Routes.profile: (context) =>const ProfileView(),
+        Routes.layout: (context) =>const LayoutWidget(),
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const LayoutWidget(),
+      home: const SplachView(),
     );
   }
 }

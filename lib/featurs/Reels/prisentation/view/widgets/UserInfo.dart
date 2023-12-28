@@ -13,7 +13,7 @@ class UserInfo extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CircleAvatar(
+       const CircleAvatar(
           radius: 20,
           backgroundImage: AssetImage(
               'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
@@ -29,7 +29,7 @@ class UserInfo extends StatelessWidget {
         const SizedBox(
           width: 8,
         ),
-        FollowButton()
+       const FollowButton()
       ],
     );
   }

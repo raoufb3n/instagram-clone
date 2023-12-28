@@ -18,7 +18,7 @@ class ProfileInfo extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircleAvatar(
+             const CircleAvatar(
                 radius: 45,
                 backgroundImage: AssetImage(
                     'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),

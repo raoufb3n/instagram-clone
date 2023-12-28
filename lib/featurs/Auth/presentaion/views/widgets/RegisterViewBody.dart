@@ -3,7 +3,7 @@ import 'package:instagram_clone/core/utils/Theme/routes.dart';
 import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/PageViewItem.dart';
 
 class RegisterViewBody extends StatefulWidget {
-  RegisterViewBody({super.key});
+  const RegisterViewBody({super.key});
 
   @override
   State<RegisterViewBody> createState() => _RegisterViewBodyState();
@@ -16,14 +16,14 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
   Widget build(BuildContext context) {
     return PageView(
       controller: _pageController,
-      physics: NeverScrollableScrollPhysics(),
+      physics:const NeverScrollableScrollPhysics(),
       children: [
         PageViewItem(
           hintText: 'Full name',
           onPressed: () {
             setState(() {
               _pageController.nextPage(
-                  duration: Duration(seconds: 1), curve: Curves.easeIn);
+                  duration:const Duration(seconds: 1), curve: Curves.easeIn);
             });
           },
           titleText: 'Whats your name?',
@@ -34,7 +34,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
           onPressed: () {
             setState(() {
               _pageController.nextPage(
-                  duration: Duration(seconds: 1), curve: Curves.easeIn);
+                  duration:const Duration(seconds: 1), curve: Curves.easeIn);
             });
           },
           titleText: 'Create a password',
@@ -47,7 +47,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
           onPressed: () {
             setState(() {
               _pageController.nextPage(
-                  duration: Duration(seconds: 1), curve: Curves.easeIn);
+                  duration:const Duration(seconds: 1), curve: Curves.easeIn);
             });
           },
           titleText: 'Create a username',

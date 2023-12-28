@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/Layout.dart';
+import 'package:instagram_clone/core/functions/routeTransition.dart';
 import 'package:instagram_clone/core/utils/Theme/colors.dart';
 import 'package:instagram_clone/featurs/splash/presentation/views/widgets/SplachViewBody.dart';
 
@@ -15,7 +17,7 @@ class _SplachViewState extends State<SplachView> {
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacementNamed('login');
+      Navigator.of(context).pushReplacement(RouteTransition.createRoute(LayoutWidget()));
     });
   }
 
@@ -27,3 +29,4 @@ class _SplachViewState extends State<SplachView> {
     );
   }
 }
+ 

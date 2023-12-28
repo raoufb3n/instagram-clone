@@ -3,7 +3,7 @@ import 'package:instagram_clone/core/utils/Theme/colors.dart';
 import 'package:instagram_clone/core/utils/Theme/styles.dart';
 
 class CustomProfileButton extends StatelessWidget {
-  CustomProfileButton({super.key, required this.label, required this.isFoolow});
+  const CustomProfileButton({super.key, required this.label, required this.isFoolow});
   final String label;
   final bool isFoolow;
   @override

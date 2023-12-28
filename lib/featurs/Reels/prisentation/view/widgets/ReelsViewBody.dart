@@ -27,9 +27,9 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
-    super.dispose();
     _controller.dispose();
+    super.dispose();
+    
   }
 
   @override
@@ -62,7 +62,7 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
               end: Alignment.bottomCenter,
               colors: [
                 Color.fromARGB(opacity, 0, 0, 0),
-                Color.fromARGB(0, 32, 32, 32),
+               const Color.fromARGB(0, 32, 32, 32),
               ],
             )),
           ),
@@ -78,7 +78,7 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
               end: Alignment.topCenter,
               colors: [
                 Color.fromARGB(opacity, 0, 0, 0),
-                Color.fromARGB(0, 32, 32, 32),
+               const Color.fromARGB(0, 32, 32, 32),
               ],
             )),
           ),
@@ -88,17 +88,17 @@ class _ReelsViewBodyState extends State<ReelsViewBody> {
             bottom: 24,
             child: AnimatedOpacity(
               opacity: opacity /150,
-              duration: Duration(milliseconds: 300),
-              child: CtaSection())),
+              duration:const Duration(milliseconds: 300),
+              child:const CtaSection())),
         Positioned(
             left: 24,
             bottom: 32,
             child: AnimatedOpacity(
               opacity: opacity /150,
-              duration: Duration(milliseconds: 300),
+              duration:const Duration(milliseconds: 300),
               child: SizedBox(
                 height: context.height / 7.8,
-                child: Column(
+                child:const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

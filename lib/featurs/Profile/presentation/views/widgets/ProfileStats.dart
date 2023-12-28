@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/utils/Theme/styles.dart';
 
 class ProfileStats extends StatelessWidget {
-  ProfileStats({super.key, required this.numOne, required this.numTwo});
+ const ProfileStats({super.key, required this.numOne, required this.numTwo});
   final String numOne;
   final String numTwo;
   @override

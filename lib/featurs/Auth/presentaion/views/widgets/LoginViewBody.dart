@@ -52,19 +52,19 @@ class LoginViewBody extends StatelessWidget {
             'assets/images/instaLgram.png',
             height: 60,
           ),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
           Column(
             children: [
-              CustomTextField(
+             const CustomTextField(
                 obsecure: false,
                 hintText: 'Usernmae,email or mobile number',
               ),
               const SizedBox(
                 height: 12,
               ),
-              CustomTextField(
+             const CustomTextField(
                 obsecure: false,
                 hintText: 'Password',
               ),

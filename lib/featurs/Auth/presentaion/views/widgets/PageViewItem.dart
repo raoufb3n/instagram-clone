@@ -5,18 +5,18 @@ import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/CustomTex
 import 'package:instagram_clone/featurs/Auth/presentaion/views/widgets/CutomButton.dart';
 
 class PageViewItem extends StatelessWidget {
-  PageViewItem(
+ const PageViewItem(
       {super.key,
       required this.hintText,
       required this.titleText,
       this.visible,
       this.visibleText,
       required this.onPressed});
-  String titleText;
-  bool? visible;
-  Function()? onPressed;
-  String hintText;
-  String? visibleText;
+  final String titleText;
+  final bool? visible;
+  final Function()? onPressed;
+  final String hintText;
+  final String? visibleText;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -61,7 +61,7 @@ class PageViewItem extends StatelessWidget {
                             )
                           ],
                         )
-                      : SizedBox(
+                      :const SizedBox(
                           height: 16,
                         ),
                 ),

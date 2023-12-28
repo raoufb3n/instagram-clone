@@ -18,9 +18,9 @@ class AvatarListView extends StatelessWidget {
           height: 107,
           child: Row(
             children: [
-              ProfileAvatar(isUser: true),
+             const ProfileAvatar(isUser: true),
               ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics:const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: 25,

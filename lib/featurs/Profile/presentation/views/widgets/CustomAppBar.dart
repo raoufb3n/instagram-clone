@@ -21,7 +21,7 @@ class CustomAppBarProfile extends StatelessWidget {
                 style: Styles.displayBold16.copyWith(fontSize: 19),
               ),
               GestureDetector(
-                  child: Icon(Icons.keyboard_arrow_down_rounded))
+                  child:const Icon(Icons.keyboard_arrow_down_rounded))
             ],
           ),
           const Spacer(),
