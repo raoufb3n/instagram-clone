@@ -34,11 +34,11 @@ class PostInfo extends StatelessWidget {
               )
             ],
           ),
-          Expanded(
-              child: Container(
+          const Spacer(),
+            Container(
             alignment: Alignment.centerRight,
             child: IconButton(onPressed: () {}, icon: InstaIcons.plus),
-          ))
+          )
         ],
       ),
     );

@@ -11,7 +11,7 @@ class ProfilePostsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Expanded(
+   
         child: GridView.count(
           shrinkWrap: true,
           crossAxisSpacing: 1.5,
@@ -36,7 +36,7 @@ class ProfilePostsGrid extends StatelessWidget {
                     fit: BoxFit.fill)),
           ],
         ),
-      ),
+     
     );
   }
 }

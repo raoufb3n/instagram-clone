@@ -29,7 +29,7 @@ class AvatarListView extends StatelessWidget {
                     padding: const EdgeInsets.all(4.0),
                     child: ProfileAvatar(isUser: false,onTap: () {
                       
-                      Navigator.push(context, RouteTransition.createRoute(StoryView()));
+                      Navigator.push(context, RouteTransition.createRoute(const StoryView()));
                     },),
                   );
                 },

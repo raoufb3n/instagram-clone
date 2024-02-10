@@ -19,8 +19,8 @@ class PostLayout extends StatelessWidget {
               SizedBox(
                 width: context.width / 1.5,
                 child: GridView.count(
-                  physics: NeverScrollableScrollPhysics(),
-                  padding: EdgeInsets.only(right: 1.5, bottom: 1.5),
+                  physics:const NeverScrollableScrollPhysics(),
+                  padding:const EdgeInsets.only(right: 1.5, bottom: 1.5),
                   crossAxisSpacing: 1.5,
                   mainAxisSpacing: 1.5,
                   shrinkWrap: true,

@@ -5,15 +5,10 @@ import 'package:instagram_clone/core/extensions/extensions.dart';
 import 'package:instagram_clone/core/utils/Theme/icons.dart';
 import 'package:instagram_clone/featurs/Home/views/widgets/customNavBarItem.dart';
 
-class LayoutWidget extends StatefulWidget {
+class LayoutWidget extends StatelessWidget {
   const LayoutWidget({super.key});
 
-  @override
-  State<LayoutWidget> createState() => _LayoutWidgetState();
-}
-
-class _LayoutWidgetState extends State<LayoutWidget> {
-  int selectdIndex = 0;
+  
 
   @override
   Widget build(BuildContext context) {

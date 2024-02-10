@@ -16,14 +16,14 @@ class ProfileInfo extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+         const Row(
             children: [
-             const CircleAvatar(
+              CircleAvatar(
                 radius: 45,
                 backgroundImage: AssetImage(
                     'assets/images/nigel-hoare-_r3nclhPoPM-unsplash.jpg'),
               ),
-              const Spacer(),
+             Spacer(),
               ProfileStats(numOne: '5', numTwo: 'Posts'),
               ProfileStats(numOne: '120', numTwo: 'Followers'),
               ProfileStats(numOne: '350', numTwo: 'Following')

@@ -44,7 +44,7 @@ class _PostWidgetState extends State<PostWidget> {
             children: [
               SizedBox(
                 height: context.height * .6,
-                width: double.infinity,
+                width: context.width,
                 child: AspectRatio(
                   aspectRatio: 8 / 8,
                   child: Image.asset(

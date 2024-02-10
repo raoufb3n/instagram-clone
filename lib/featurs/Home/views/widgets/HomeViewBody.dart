@@ -26,7 +26,7 @@ class HomeViewBody extends StatelessWidget {
             child: Column(
           children: [
              AvatarListView(),
-             SizedBox(
+              SizedBox(
               height: 8,
             )
           ],
