@@ -9,7 +9,7 @@ This project is an Instagram clone built using Flutter. It aims to replicate the
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/instagram-clone.git
+git clone https://github.com/raoufb3n/instagram-clone.git
 ```
 Navigate to the project directory:
 ```bash
